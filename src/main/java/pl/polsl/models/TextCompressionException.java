@@ -6,8 +6,7 @@ package pl.polsl.models;
  * @author Rafał Klinowski
  * @version 1.0
  */
-public class TextCompressionException extends Exception
-{
+public class TextCompressionException extends Exception {
     /**
      * Constructor calling base constructor of the Exception class.
      * @param errorMessage Text containing details about the exception, displayed on the user's screen.

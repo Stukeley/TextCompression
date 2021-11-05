@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Minor changes and documentation.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/views/Reader.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/views/Reader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/TextCompressionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/TextCompressionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Reader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +50,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="pl.polsl.controllers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -74,8 +88,18 @@
       <updated>1634559337680</updated>
       <workItem from="1634559340009" duration="10992000" />
       <workItem from="1634809048710" duration="646000" />
-      <workItem from="1635070903436" duration="715000" />
+      <workItem from="1635070903436" duration="940000" />
+      <workItem from="1636023846130" duration="699000" />
+      <workItem from="1636120324087" duration="1897000" />
     </task>
+    <task id="LOCAL-00001" summary="Minor changes and documentation.">
+      <created>1635072316118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635072316118</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +116,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor changes and documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes and documentation." />
   </component>
 </project>

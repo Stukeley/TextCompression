@@ -4,18 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Minor changes and documentation.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/package-info.java" afterDir="false" />
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Slightly tweak the application to meet requirements. Generate JavaDoc again.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/HistoryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StringHelperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/views/Reader.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/views/Reader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/doc/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/controllers/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/controllers/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/controllers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/controllers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/controllers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/models/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/models/Algorithm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/models/TextCompressionException.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/models/TextCompressionException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/models/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/models/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/models/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/models/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/views/Display.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/views/Display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/views/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/views/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/pl/polsl/views/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pl/polsl/views/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/TextCompressionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/TextCompressionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Reader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,8 +77,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/UnitTests" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -90,7 +119,8 @@
       <workItem from="1634809048710" duration="646000" />
       <workItem from="1635070903436" duration="940000" />
       <workItem from="1636023846130" duration="699000" />
-      <workItem from="1636120324087" duration="1897000" />
+      <workItem from="1636120324087" duration="2046000" />
+      <workItem from="1636908914441" duration="5855000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -99,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635072316118</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Slightly tweak the application to meet requirements. Generate JavaDoc again.">
+      <created>1636143107953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636143107953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor changes and documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes and documentation." />
+    <MESSAGE value="Slightly tweak the application to meet requirements. Generate JavaDoc again." />
+    <option name="LAST_COMMIT_MESSAGE" value="Slightly tweak the application to meet requirements. Generate JavaDoc again." />
   </component>
 </project>

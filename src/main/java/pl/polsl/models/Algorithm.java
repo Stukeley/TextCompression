@@ -14,8 +14,13 @@ public class Algorithm {
      * @throws TextCompressionException Exception thrown when the input format is invalid (e.g. contains a symbol or is empty).
      */
     public String compress(String input) throws TextCompressionException {
+
+        if (input == null) {
+            throw new TextCompressionException("Invalid input string - input cannot be null.");
+        }
+
         StringHelper stringHelper = new StringHelper();
-        if (stringHelper.containsSymbols(input)) {
+        if (stringHelper.containsSymbols(input) || stringHelper.containsNumbers(input)) {
             throw new TextCompressionException("Invalid input string - input contains invalid characters.");
         }
 
@@ -61,8 +66,13 @@ public class Algorithm {
      * @throws TextCompressionException Exception thrown when the input format is invalid (e.g. contains a symbol, is empty or contains zeroes).
      */
     public String decompress(String input) throws TextCompressionException {
+
+        if (input == null) {
+            throw new TextCompressionException("Invalid input string - input cannot be null.");
+        }
+
         StringHelper stringHelper = new StringHelper();
-        if (stringHelper.containsSymbols(input)) {
+        if (stringHelper.containsSymbols(input) || !stringHelper.containsNumbers(input)) {
             throw new TextCompressionException("Invalid input string - input contains invalid characters.");
         }
 

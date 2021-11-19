@@ -4,6 +4,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import pl.polsl.models.Algorithm;
+import pl.polsl.models.TextCompressionException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Class containing tests of the Text Decompression algorithm.
@@ -22,17 +26,38 @@ public class DecompressionTest {
     @ParameterizedTest
     @CsvSource({"a4b2c2,aaaabbcc", "x1y1z1,xyz", "a7A2a9,aaaaaaaAAaaaaaaaaa", "a1s1d1f1a2s2d2f2A1S1D1F1,asdfaassddffASDF"})
     void testDecompressionResultForValidInput(String input, String expected) {
-
+        try {
+            String actual = algorithm.decompress(input);
+            assertEquals(expected, actual);
+        }
+        catch (TextCompressionException ex) {
+            fail("The method was not supposed to throw any exceptions for this input!");
+        }
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"a4,b2c2", "aaaabbcc", ""})
     void testDecompressionThrowsForInvalidInput(String input) {
 
+        try {
+            algorithm.decompress(input);
+            fail("The method was supposed to throw an exception of type TextCompressionException for invalid input!");
+        }
+        catch (TextCompressionException ex) {
+            return;
+        }
     }
 
     @Test
     void testDecompressionThrowsForNullInput() {
+        String input = null;
 
+        try {
+            algorithm.decompress(input);
+            fail("The method was supposed to throw an exception of type TextCompressionException for null input!");
+        }
+        catch (TextCompressionException ex) {
+            return;
+        }
     }
 }

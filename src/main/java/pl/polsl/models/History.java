@@ -73,7 +73,7 @@ public class History {
      * @return The entry's value, where key is equal to input, in History, or null if value was not found.
      */
     public String getEntryOutputByInput(String input) throws HistoryException {
-        if (input.equals(null)) {
+        if (input == null) {
             throw new HistoryException("Provided input value cannot be null!");
         }
 

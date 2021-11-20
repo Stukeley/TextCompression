@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add a foreach implementation to History and its invocation to Display.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Change the implementation of displayStringInConsole to now take a variable amount of parameters.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <recent name="pl.polsl.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.CompressionTest and 2 more">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.Main" />
       <module name="DekompresjaTekstu" />
@@ -65,20 +64,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompressionTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DekompresjaTekstu" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CompressionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DecompressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DekompresjaTekstu" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DecompressionTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="CompressionTest" />
+        <pattern testClass="DecompressionTest" />
+        <pattern testClass="HistoryTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,13 +97,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HistoryTest.historyIteratorReturnsCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DekompresjaTekstu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HistoryTest" />
+      <option name="METHOD_NAME" value="historyIteratorReturnsCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompressionTest and 2 more" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.HistoryTest and 2 more" />
+        <item itemvalue="JUnit.HistoryTest.historyIteratorReturnsCorrectly" />
         <item itemvalue="JUnit.HistoryTest" />
-        <item itemvalue="JUnit.DecompressionTest" />
-        <item itemvalue="JUnit.CompressionTest" />
+        <item itemvalue="JUnit.HistoryTest and 2 more" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +132,7 @@
       <workItem from="1636120324087" duration="2046000" />
       <workItem from="1636908914441" duration="6262000" />
       <workItem from="1637361444761" duration="2907000" />
-      <workItem from="1637412261520" duration="6863000" />
+      <workItem from="1637412261520" duration="8394000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -180,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637416506638</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change the implementation of displayStringInConsole to now take a variable amount of parameters.">
+      <created>1637421292291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637421292291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +216,7 @@
     <MESSAGE value="Add Test implementations." />
     <MESSAGE value="Add comments to tests functions." />
     <MESSAGE value="Add a foreach implementation to History and its invocation to Display." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a foreach implementation to History and its invocation to Display." />
+    <MESSAGE value="Change the implementation of displayStringInConsole to now take a variable amount of parameters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the implementation of displayStringInConsole to now take a variable amount of parameters." />
   </component>
 </project>

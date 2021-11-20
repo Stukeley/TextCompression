@@ -25,6 +25,10 @@ public class HistoryTest {
     @BeforeEach
     void setUp() {
         history = new History();
+
+        history.add("aaaabbcc", "a4b2c2");
+        history.add("aabbcc", "a2b2c2");
+        history.add("abc", "a1b1c1");
     }
 
     /**
@@ -34,9 +38,6 @@ public class HistoryTest {
      */
     @Test
     void historySizeUpdatesCorrectly() {
-        history.add("aaaabbcc", "a4b2c2");
-        history.add("aabbcc", "a2b2c2");
-        history.add("abc", "a1b1c1");
 
         assertEquals(3, history.getHistorySize());
 
@@ -53,12 +54,7 @@ public class HistoryTest {
     @Test
     void historyGetsValueByInput() {
         String firstInput = "aaaabbcc", firstOutput = "a4b2c2";
-        String secondInput = "aabbcc", secondOutput = "a2b2c2";
         String thirdInput = "abc", thirdOutput = "a1b1c1";
-
-        history.add(firstInput, firstOutput);
-        history.add(secondInput, secondOutput);
-        history.add(thirdInput, thirdOutput);
 
         try {
             String first = history.getEntryOutputByInput(firstInput);
@@ -80,12 +76,7 @@ public class HistoryTest {
     @Test
     void historyGetsValueByIndex() {
         String firstInput = "aaaabbcc", firstOutput = "a4b2c2";
-        String secondInput = "aabbcc", secondOutput = "a2b2c2";
         String thirdInput = "abc", thirdOutput = "a1b1c1";
-
-        history.add(firstInput, firstOutput);
-        history.add(secondInput, secondOutput);
-        history.add(thirdInput, thirdOutput);
 
         try {
             Map.Entry<String, String> first = history.getEntryByIndex(0);
@@ -108,9 +99,6 @@ public class HistoryTest {
      */
     @Test
     void historyThrowsForInvalidIndex() {
-        history.add("aaaabbcc", "a4b2c2");
-        history.add("aabbcc", "a2b2c2");
-        history.add("abc", "a1b1c1");
 
         try {
             history.getEntryByIndex(4);
@@ -128,9 +116,6 @@ public class HistoryTest {
      */
     @Test
     void historyThrowsForNullInput() {
-        history.add("aaaabbcc", "a4b2c2");
-        history.add("aabbcc", "a2b2c2");
-        history.add("abc", "a1b1c1");
 
         try {
             history.getEntryOutputByInput(null);
@@ -139,5 +124,31 @@ public class HistoryTest {
         catch (HistoryException ex) {
             return;
         }
+    }
+
+    /**
+     * Function testing the Iterator functionality of History.
+     * It adds some objects to the History, then uses a foreach loop to see if the elements are returned correctly - in the right order and amount.
+     * Expected behaviour: all the elements are returned and in the correct order.
+     */
+    @Test
+    void historyIteratorReturnsCorrectly() {
+
+        int i = 0;
+
+        for (Map.Entry<String, String> expected : history) {
+
+            try {
+                Map.Entry<String, String> actual = history.getEntryByIndex(i++);
+
+                assertEquals(expected.getKey(), actual.getKey());
+                assertEquals(expected.getValue(), actual.getValue());
+            }
+            catch (HistoryException ex) {
+                fail("This method was not supposed to throw an exception for this test case!");
+            }
+        }
+
+        assertEquals(3, i);
     }
 }

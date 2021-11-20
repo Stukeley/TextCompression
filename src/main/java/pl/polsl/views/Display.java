@@ -22,6 +22,5 @@ public class Display {
      * @param history History object to be displayed.
      */
     public void displayHistoryInConsole(History history) {
-
     }
 }

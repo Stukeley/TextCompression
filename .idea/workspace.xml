@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Implement base Test functionality. Add a History class representing a collection of user inputs and corresponding algorithm outputs.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add Test implementations.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/StringHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StringHelperTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +46,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/UnitTests" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.polsl.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HistoryTest">
+  <component name="RunManager" selected="JUnit.HistoryTest and 2 more">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.Main" />
       <module name="DekompresjaTekstu" />
@@ -88,6 +85,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HistoryTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DekompresjaTekstu" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="HistoryTest" />
+        <pattern testClass="DecompressionTest" />
+        <pattern testClass="CompressionTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DekompresjaTekstu" />
       <option name="PACKAGE_NAME" value="" />
@@ -99,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HistoryTest and 2 more" />
         <item itemvalue="JUnit.HistoryTest" />
         <item itemvalue="JUnit.DecompressionTest" />
         <item itemvalue="JUnit.CompressionTest" />
@@ -120,7 +130,8 @@
       <workItem from="1636023846130" duration="699000" />
       <workItem from="1636120324087" duration="2046000" />
       <workItem from="1636908914441" duration="6262000" />
-      <workItem from="1637361444761" duration="2788000" />
+      <workItem from="1637361444761" duration="2907000" />
+      <workItem from="1637412261520" duration="2676000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -150,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636915016928</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Test implementations.">
+      <created>1637365184207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637365184207</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,9 +187,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Minor changes and documentation." />
     <MESSAGE value="Slightly tweak the application to meet requirements. Generate JavaDoc again." />
     <MESSAGE value="Implement base Test functionality. Add a History class representing a collection of user inputs and corresponding algorithm outputs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement base Test functionality. Add a History class representing a collection of user inputs and corresponding algorithm outputs." />
+    <MESSAGE value="Add Test implementations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Test implementations." />
   </component>
 </project>

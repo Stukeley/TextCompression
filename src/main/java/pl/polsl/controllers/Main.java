@@ -20,13 +20,15 @@ public class Main {
     public static void main(String[] args) {
         boolean repeatAlgorithm = true;
         History history = new History();
+        Algorithm algorithm = new Algorithm();
+        Display display = new Display();
 
         do {
             String userInput = "";
 
             if (args.length == 0) {
-                System.out.println("No command line parameters have been input.");
-                System.out.println("Please type in the string to compress or decompress (letters and numbers only):");
+                display.displayStringsInConsole("No command line parameters have been input.",
+                        "Please type in the string to compress or decompress (letters and numbers only):");
 
                 Reader reader = new Reader();
                 userInput = reader.readTextFromConsole();
@@ -35,7 +37,6 @@ public class Main {
                 userInput = args[0];
             }
 
-            Algorithm algorithm = new Algorithm();
             String output = "";
 
             try {
@@ -50,19 +51,18 @@ public class Main {
 
             }
             catch (TextCompressionException ex) {
-                System.out.println(ex.getMessage());
+                display.displayStringsInConsole("Exception in Algorithm:", ex.getMessage());
                 return;
             }
 
-            Display display = new Display();
-            display.displayStringInConsole(output);
+            display.displayStringsInConsole(output);
 
             // Add entry to History.
             history.add(userInput, output);
 
             // Ask if user wants to repeat the algorithm, or see History.
-            display.displayStringInConsole("Press 1 if you want to repeat the algorithm.\nPress 2 if you want to see history." +
-                    "\nPress any other key to exit.");
+            display.displayStringsInConsole("Press 1 if you want to repeat the algorithm.", "Press 2 if you want to see history.",
+                    "Press any other key to exit.");
 
             String userChoice = new Reader().readTextFromConsole();
 
@@ -74,7 +74,7 @@ public class Main {
             }
             else {
                 repeatAlgorithm = false;
-                display.displayStringInConsole("End of program.");
+                display.displayStringsInConsole("End of program.");
             }
 
         } while(repeatAlgorithm);

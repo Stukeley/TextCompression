@@ -7,16 +7,18 @@ import java.util.Map;
 /**
  * View class responsible for displaying information in the Console.
  * @author Rafał Klinowski
- * @version 1.1
+ * @version 1.2
  */
 public class Display {
     /**
      * Method displaying a String to the system Console.
-     * @param textToShow Text to be shown in Console on the user's screen.
+     * The method takes a variable amount of parameters, with each one being a single line of text to display.
+     * @param textsToShow Texts to be shown in Console on the user's screen. Each passed parameter is one line of text.
      */
-    public void displayStringInConsole(String textToShow)
-    {
-        System.out.println(textToShow);
+    public void displayStringsInConsole(String... textsToShow) {
+        for (String text : textsToShow) {
+            System.out.println(text);
+        }
     }
 
     /**

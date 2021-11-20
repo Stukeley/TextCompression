@@ -2,10 +2,12 @@ package pl.polsl.views;
 
 import pl.polsl.models.History;
 
+import java.util.Map;
+
 /**
  * View class responsible for displaying information in the Console.
  * @author Rafał Klinowski
- * @version 1.0
+ * @version 1.1
  */
 public class Display {
     /**
@@ -22,5 +24,8 @@ public class Display {
      * @param history History object to be displayed.
      */
     public void displayHistoryInConsole(History history) {
+        for (Map.Entry<String, String> entry : history) {
+            System.out.println("Input: " + entry.getKey() + "; output: " + entry.getValue());
+        }
     }
 }

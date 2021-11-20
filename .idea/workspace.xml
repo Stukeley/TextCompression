@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add Test implementations.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add comments to tests functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/UnitTests" />
+    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/JavaStreams" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
@@ -53,7 +52,7 @@
       <recent name="pl.polsl.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HistoryTest and 2 more">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.Main" />
       <module name="DekompresjaTekstu" />
@@ -108,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HistoryTest and 2 more" />
         <item itemvalue="JUnit.HistoryTest" />
         <item itemvalue="JUnit.DecompressionTest" />
         <item itemvalue="JUnit.CompressionTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +130,7 @@
       <workItem from="1636120324087" duration="2046000" />
       <workItem from="1636908914441" duration="6262000" />
       <workItem from="1637361444761" duration="2907000" />
-      <workItem from="1637412261520" duration="2676000" />
+      <workItem from="1637412261520" duration="4059000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -168,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637365184207</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add comments to tests functions.">
+      <created>1637415113934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637415113934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +198,7 @@
     <MESSAGE value="Slightly tweak the application to meet requirements. Generate JavaDoc again." />
     <MESSAGE value="Implement base Test functionality. Add a History class representing a collection of user inputs and corresponding algorithm outputs." />
     <MESSAGE value="Add Test implementations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test implementations." />
+    <MESSAGE value="Add comments to tests functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments to tests functions." />
   </component>
 </project>

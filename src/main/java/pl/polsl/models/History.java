@@ -1,17 +1,25 @@
 package pl.polsl.models;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Class responsible managing user inputs and outputs in a collection of pair values.
+ * Implements the Iterable and Iterator interfaces to allow using a foreach loop directly on objects of this class.
  * @author Rafał Klinowski
- * @version 1.0
+ * @version 1.1
  */
-public class History {
+public class History implements Iterable<Map.Entry<String, String>>, Iterator<Map.Entry<String, String>> {
+
+    /**
+     * Collection representing the history of user inputs and outputs.
+     * The type is Map.Entry - each element in the collection is a combination of an input (String) and output (String).
+     */
     private List<Map.Entry<String, String>> history;
+
+    /**
+     * Index responsible for iterating through the history directly (by referencing an object of this class).
+     */
+    private int index;
 
     /**
      * Constructor initializing the collection.
@@ -78,7 +86,7 @@ public class History {
         }
 
         for (int i=0;i<getHistorySize();i++) {
-            Map.Entry entry = history.get(i);
+            Map.Entry<String, String> entry = history.get(i);
             if (entry.getKey().equals(input)) {
                 return entry.getValue().toString();
             }
@@ -93,5 +101,34 @@ public class History {
      */
     public int getHistorySize() {
         return history.size();
+    }
+
+    /**
+     * Method resetting index to 0 and returning an iterator being an object of this class.
+     * @return An iterator, being this object of the History class.
+     */
+    @Override
+    public Iterator<Map.Entry<String, String>> iterator() {
+        index = 0;
+        return this;
+    }
+
+    /**
+     * Method returning a boolean value representing if we can get the next value (that is, if current index is less than the size of history).
+     * @return True if next value is available; false otherwise.
+     */
+    @Override
+    public boolean hasNext() {
+        return index < history.size();
+    }
+
+    /**
+     * Method returning the next value in history.
+     * Increments index afterwards.
+     * @return The element at index in history.
+     */
+    @Override
+    public Map.Entry<String, String> next() {
+        return history.get(index++);
     }
 }

@@ -8,7 +8,7 @@ import pl.polsl.views.Display;
 /**
  * Main controller class responsible for managing the communication between the user and the program.
  * @author Rafał Klinowski
- * @version 1.3
+ * @version 1.4
  */
 public class Main {
     /**

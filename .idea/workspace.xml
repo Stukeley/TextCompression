@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Cleanup and re-make documentation.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/HistoryException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
@@ -140,7 +138,7 @@
       <workItem from="1636908914441" duration="6262000" />
       <workItem from="1637361444761" duration="2907000" />
       <workItem from="1637412261520" duration="8687000" />
-      <workItem from="1637930608983" duration="1815000" />
+      <workItem from="1637930608983" duration="1927000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -212,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637422913295</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console.">
+      <created>1637932510013</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637932510013</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +246,7 @@
     <MESSAGE value="Change the implementation of displayStringInConsole to now take a variable amount of parameters." />
     <MESSAGE value="Add a new test and comments. Rework History tests slightly." />
     <MESSAGE value="Cleanup and re-make documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup and re-make documentation." />
+    <MESSAGE value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
   </component>
 </project>

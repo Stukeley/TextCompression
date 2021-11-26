@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Class containing tests of the History class and related collection.
  * @author Rafał Klinowski
- * @version 1.0
+ * @version 1.1
  */
 public class HistoryTest {
     /**

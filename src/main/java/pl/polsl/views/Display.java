@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * View class responsible for displaying information in the Console.
  * @author Rafał Klinowski
- * @version 1.2
+ * @version 1.3
  */
 public class Display {
     /**

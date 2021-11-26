@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 /**
  * Class containing tests of the Text Decompression algorithm.
  * @author Rafał Klinowski
- * @version 1.0
+ * @version 1.1
  */
 public class DecompressionTest {
 

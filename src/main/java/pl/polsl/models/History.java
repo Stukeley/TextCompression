@@ -7,7 +7,7 @@ import java.util.stream.Stream;
  * Class responsible managing user inputs and outputs in a collection of pair values.
  * Implements the Iterable and Iterator interfaces to allow using a foreach loop directly on objects of this class.
  * @author Rafał Klinowski
- * @version 1.1
+ * @version 1.2
  */
 public class History implements Iterable<Map.Entry<String, String>>, Iterator<Map.Entry<String, String>> {
 
@@ -15,7 +15,7 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
      * Collection representing the history of user inputs and outputs.
      * The type is Map.Entry - each element in the collection is a combination of an input (String) and output (String).
      */
-    private List<Map.Entry<String, String>> history;
+    private final List<Map.Entry<String, String>> history;
 
     /**
      * Index responsible for iterating through the history directly (by referencing an object of this class).
@@ -81,7 +81,7 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
         for (int i=0;i<getHistorySize();i++) {
             Map.Entry<String, String> entry = history.get(i);
             if (entry.getKey().equals(input)) {
-                return entry.getValue().toString();
+                return entry.getValue();
             }
         }
 

@@ -3,6 +3,7 @@ package pl.polsl.views;
 import pl.polsl.models.History;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * View class responsible for displaying information in the Console.
@@ -26,8 +27,26 @@ public class Display {
      * @param history History object to be displayed.
      */
     public void displayHistoryInConsole(History history) {
+
+        System.out.println("------------------------");
+
         for (Map.Entry<String, String> entry : history) {
             System.out.println("Input: " + entry.getKey() + "; output: " + entry.getValue());
         }
+
+        System.out.println("------------------------");
+    }
+
+    /**
+     * Method displaying a Stream, representing the History, passed as parameter, to the system Console.
+     * @param stream Stream of type Map.Entry to be displayed.
+     */
+    public void displayHistoryStreamInConsole(Stream<Map.Entry<String, String>> stream) {
+
+        System.out.println("------------------------");
+
+        stream.forEach(entry -> System.out.println("Input: " + entry.getKey() + "; output: " + entry.getValue()));
+
+        System.out.println("------------------------");
     }
 }

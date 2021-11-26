@@ -57,11 +57,17 @@ public class Main {
 
             display.displayStringsInConsole(output);
 
-            // Add entry to History.
-            history.add(userInput, output);
+            try {
+                // Add entry to History.
+                history.add(userInput, output);
+            }
+            catch (TextCompressionException ex) {
+                display.displayStringsInConsole("Exception in History: ", ex.getMessage());
+            }
 
             // Ask if user wants to repeat the algorithm, or see History.
-            display.displayStringsInConsole("Press 1 if you want to repeat the algorithm.", "Press 2 if you want to see history.",
+            display.displayStringsInConsole("Press 1 if you want to repeat the algorithm.", "Press 2 if you want to full see history.",
+                    "Press 3 if you want to see Compression history.", "Press 4 if you want to see Decompression history.",
                     "Press any other key to exit.");
 
             String userChoice = new Reader().readTextFromConsole();
@@ -71,6 +77,12 @@ public class Main {
             }
             else if (userChoice.equals("2")) {
                 display.displayHistoryInConsole(history);
+            }
+            else if (userChoice.equals("3")) {
+                display.displayHistoryStreamInConsole(history.filterHistoryForCompressionOnly());
+            }
+            else if (userChoice.equals("4")) {
+                display.displayHistoryStreamInConsole(history.filterHistoryForDecompressionOnly());
             }
             else {
                 repeatAlgorithm = false;

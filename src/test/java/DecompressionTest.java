@@ -40,7 +40,7 @@ public class DecompressionTest {
     void testDecompressionResultForValidInput(String input, String expected) {
         try {
             String actual = algorithm.decompress(input);
-            assertEquals(expected, actual);
+            assertEquals(expected, actual, "The value returned from the Algorithm was not correct!");
         }
         catch (TextCompressionException ex) {
             fail("The method was not supposed to throw any exceptions for this input!");

@@ -1,6 +1,7 @@
 package pl.polsl.models;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * Class responsible managing user inputs and outputs in a collection of pair values.
@@ -30,24 +31,16 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
     }
 
     /**
-     * Constructor initializing the collection with a given value.
-     * The collection will contain a single Entry at first, made of the input and output, with input being the key.
-     * @param input User input value, acting as the key in Entry.
-     * @param output Algorithm output value, acting as the value in Entry.
-     */
-    public History(String input, String output) {
-        history = new ArrayList<>();
-
-        add(input, output);
-    }
-
-    /**
      * Method for adding a new Entry to the History.
      * This method creates a new Entry based on the parameters, and adds it to the collection.
      * @param input User input value, acting as the key in Entry.
      * @param output Algorithm output value, acting as the value in Entry.
      */
-    public void add(String input, String output) {
+    public void add(String input, String output) throws TextCompressionException {
+        if (input == null) {
+            throw new TextCompressionException("History input (key) cannot be null!");
+        }
+
         Map.Entry entry = new AbstractMap.SimpleEntry(input, output);
 
         history.add(entry);
@@ -56,12 +49,12 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
     /**
      * Method for retrieving an Entry based on index.
      * @param index Index in collection to get value for.
-     * @throws HistoryException Exception thrown when the given index is negative or out of bounds.
+     * @throws TextCompressionException Exception thrown when the given index is negative or out of bounds.
      * @return The entry's value of given index in History.
      */
-    public Map.Entry getEntryByIndex(int index) throws HistoryException {
+    public Map.Entry getEntryByIndex(int index) throws TextCompressionException {
         if (index < 0) {
-            throw new HistoryException("Index cannot be less than 0 !");
+            throw new TextCompressionException("Index cannot be less than 0 !");
         }
 
         try {
@@ -69,7 +62,7 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
             return requested;
         }
         catch (IndexOutOfBoundsException e) {
-            throw new HistoryException("Requested index was outside of collection bounds!");
+            throw new TextCompressionException("Requested index was outside of collection bounds!");
         }
     }
 
@@ -77,12 +70,12 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
      * Method for retrieving an Entry based on Input (key) value.
      * If more than one value with that key is present, the first one will be returned.
      * @param input Input string to look for in the collection.
-     * @throws HistoryException Exception thrown when the given input value is null.
+     * @throws TextCompressionException Exception thrown when the given input value is null.
      * @return The entry's value, where key is equal to input, in History, or null if value was not found.
      */
-    public String getEntryOutputByInput(String input) throws HistoryException {
+    public String getEntryOutputByInput(String input) throws TextCompressionException {
         if (input == null) {
-            throw new HistoryException("Provided input value cannot be null!");
+            throw new TextCompressionException("Provided input value cannot be null!");
         }
 
         for (int i=0;i<getHistorySize();i++) {
@@ -101,6 +94,30 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
      */
     public int getHistorySize() {
         return history.size();
+    }
+
+    /**
+     * Method returning a stream that contains all Entries in History that were made by the Compression algorithm.
+     * @return Stream containing all inputs and outputs of the Compression algorithm.
+     */
+    public Stream<Map.Entry<String, String>> filterHistoryForCompressionOnly() {
+        StringHelper stringHelper = new StringHelper();
+
+        Stream<Map.Entry<String, String>> stream = history.stream().filter(entry -> !stringHelper.containsNumbers(entry.getKey()));
+
+        return stream;
+    }
+
+    /**
+     * Method returning a stream that contains all Entries in History that were made by the Decompression algorithm.
+     * @return Stream containing all inputs and outputs of the Decompression algorithm.
+     */
+    public Stream<Map.Entry<String, String>> filterHistoryForDecompressionOnly() {
+        StringHelper stringHelper = new StringHelper();
+
+        Stream<Map.Entry<String, String>> stream = history.stream().filter(entry -> stringHelper.containsNumbers(entry.getKey()));
+
+        return stream;
     }
 
     /**

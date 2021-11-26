@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Change the implementation of displayStringInConsole to now take a variable amount of parameters.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Cleanup and re-make documentation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/HistoryException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +57,7 @@
       <recent name="pl.polsl.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CompressionTest and 2 more">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.Main" />
       <module name="DekompresjaTekstu" />
@@ -109,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CompressionTest and 2 more" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CompressionTest and 2 more" />
         <item itemvalue="JUnit.HistoryTest.historyIteratorReturnsCorrectly" />
         <item itemvalue="JUnit.HistoryTest" />
         <item itemvalue="JUnit.HistoryTest and 2 more" />
@@ -132,7 +139,8 @@
       <workItem from="1636120324087" duration="2046000" />
       <workItem from="1636908914441" duration="6262000" />
       <workItem from="1637361444761" duration="2907000" />
-      <workItem from="1637412261520" duration="8394000" />
+      <workItem from="1637412261520" duration="8687000" />
+      <workItem from="1637930608983" duration="1815000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -190,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637421292291</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add a new test and comments. Rework History tests slightly.">
+      <created>1637422742017</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637422742017</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cleanup and re-make documentation.">
+      <created>1637422913295</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637422913295</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +239,8 @@
     <MESSAGE value="Add comments to tests functions." />
     <MESSAGE value="Add a foreach implementation to History and its invocation to Display." />
     <MESSAGE value="Change the implementation of displayStringInConsole to now take a variable amount of parameters." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the implementation of displayStringInConsole to now take a variable amount of parameters." />
+    <MESSAGE value="Add a new test and comments. Rework History tests slightly." />
+    <MESSAGE value="Cleanup and re-make documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup and re-make documentation." />
   </component>
 </project>

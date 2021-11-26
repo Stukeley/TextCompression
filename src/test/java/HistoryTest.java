@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.polsl.models.History;
-import pl.polsl.models.HistoryException;
+import pl.polsl.models.TextCompressionException;
 
 import java.util.Map;
 
@@ -26,9 +26,14 @@ public class HistoryTest {
     void setUp() {
         history = new History();
 
-        history.add("aaaabbcc", "a4b2c2");
-        history.add("aabbcc", "a2b2c2");
-        history.add("abc", "a1b1c1");
+        try {
+            history.add("aaaabbcc", "a4b2c2");
+            history.add("aabbcc", "a2b2c2");
+            history.add("abc", "a1b1c1");
+        }
+        catch (TextCompressionException ex) {
+            fail("The method was not supposed to throw for this input.");
+        }
     }
 
     /**
@@ -39,11 +44,15 @@ public class HistoryTest {
     @Test
     void historySizeUpdatesCorrectly() {
 
-        assertEquals(3, history.getHistorySize());
+        assertEquals(3, history.getHistorySize(), "History size did not update properly!");
 
-        history.add("new", "n1e1w1");
-
-        assertEquals(4, history.getHistorySize());
+        try {
+            history.add("new", "n1e1w1");
+            assertEquals(4, history.getHistorySize(), "History size did not update properly!");
+        }
+        catch (TextCompressionException ex) {
+            fail("The method was not supposed to throw for this input.");
+        }
     }
 
     /**
@@ -60,10 +69,10 @@ public class HistoryTest {
             String first = history.getEntryOutputByInput(firstInput);
             String third = history.getEntryOutputByInput(thirdInput);
 
-            assertEquals(firstOutput, first);
-            assertEquals(thirdOutput, third);
+            assertEquals(firstOutput, first, "Wrong element was returned from History!");
+            assertEquals(thirdOutput, third, "Wrong element was returned from History!");
         }
-        catch (HistoryException ex) {
+        catch (TextCompressionException ex) {
             fail("The method was not supposed to throw any exceptions for this input!");
         }
     }
@@ -82,12 +91,12 @@ public class HistoryTest {
             Map.Entry<String, String> first = history.getEntryByIndex(0);
             Map.Entry<String, String> third = history.getEntryByIndex(2);
 
-            assertEquals(firstInput, first.getKey());
-            assertEquals(firstOutput, first.getValue());
-            assertEquals(thirdInput, third.getKey());
-            assertEquals(thirdOutput, third.getValue());
+            assertEquals(firstInput, first.getKey(), "Wrong value was returned from History!");
+            assertEquals(firstOutput, first.getValue(), "Wrong value was returned from History!");
+            assertEquals(thirdInput, third.getKey(), "Wrong value was returned from History!");
+            assertEquals(thirdOutput, third.getValue(), "Wrong value was returned from History!");
         }
-        catch (HistoryException ex) {
+        catch (TextCompressionException ex) {
             fail("The method was not supposed to throw any exceptions for this input!");
         }
     }
@@ -95,7 +104,7 @@ public class HistoryTest {
     /**
      * Function testing the getEntryByIndex method for invalid index value.
      * It adds some objects to the History, then tries to get an object by index that does not exist.
-     * Expected behaviour: throws an exception of type HistoryException.
+     * Expected behaviour: throws an exception of type TextCompressionException.
      */
     @Test
     void historyThrowsForInvalidIndex() {
@@ -104,7 +113,7 @@ public class HistoryTest {
             history.getEntryByIndex(4);
             fail("The method was supposed to throw an exception for this input!");
         }
-        catch (HistoryException ex) {
+        catch (TextCompressionException ex) {
             return;
         }
     }
@@ -112,7 +121,7 @@ public class HistoryTest {
     /**
      * Function testing the getEntryOutputByInput method for null input.
      * It adds some objects to the History, then tries to get an object by passing "null" as the input value.
-     * Expected behaviour: throws an exception of type HistoryException.
+     * Expected behaviour: throws an exception of type TextCompressionException.
      */
     @Test
     void historyThrowsForNullInput() {
@@ -121,7 +130,24 @@ public class HistoryTest {
             history.getEntryOutputByInput(null);
             fail("The method was supposed to throw an exception for null input!");
         }
-        catch (HistoryException ex) {
+        catch (TextCompressionException ex) {
+            return;
+        }
+    }
+
+    /**
+     * Function testing the add method for null input.
+     * It tries adding a new entry to History with the input (key) set to null.
+     * Expected behaviour: throws an exception of type TextCompressionException.
+     */
+    @Test
+    void historyThrowsWhenAddingNullInput() {
+
+        try {
+            history.add(null, "Hello");
+            fail("The method was supposed to throw an exception for null input!");
+        }
+        catch (TextCompressionException ex) {
             return;
         }
     }
@@ -141,10 +167,10 @@ public class HistoryTest {
             try {
                 Map.Entry<String, String> actual = history.getEntryByIndex(i++);
 
-                assertEquals(expected.getKey(), actual.getKey());
-                assertEquals(expected.getValue(), actual.getValue());
+                assertEquals(expected.getKey(), actual.getKey(), "Wrong value was returned from History!");
+                assertEquals(expected.getValue(), actual.getValue(), "Wrong value was returned from History!");
             }
-            catch (HistoryException ex) {
+            catch (TextCompressionException ex) {
                 fail("This method was not supposed to throw an exception for this test case!");
             }
         }

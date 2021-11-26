@@ -38,7 +38,7 @@ public class CompressionTest {
     void testCompressionResultForValidInput(String input, String expected) {
         try {
             String actual = algorithm.compress(input);
-            assertEquals(expected, actual);
+            assertEquals(expected, actual, "The value returned from the Algorithm was not correct!");
         }
         catch (TextCompressionException ex) {
             fail("The method was not supposed to throw any exceptions for this input!");

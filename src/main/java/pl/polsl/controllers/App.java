@@ -19,7 +19,11 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("textcompression"), 640, 480);
+
         stage.setScene(scene);
+        stage.setTitle("Text Compression");
+        stage.setResizable(false);
+
         stage.show();
     }
 

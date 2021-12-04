@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Update comments and re-make documentation.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Start implementing GUI with JavaFX.">
       <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pl.polsl.fxml/textcompression.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pl.polsl.fxml/textcompression.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pl/polsl/controllers/textcompression.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +47,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/javafx-sdk-17.0.1/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.43678162" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programowanie\TextCompression\src\main\resources\pl\polsl\controllers" />
+      <recent name="C:\Programowanie\TextCompression\src\main\resources\pl.polsl.controllers" />
+      <recent name="C:\Programowanie\TextCompression\src\main\java\pl\polsl\views" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.polsl.controllers" />
     </key>
@@ -155,7 +158,10 @@
       <workItem from="1637930608983" duration="2056000" />
       <workItem from="1638187015334" duration="48000" />
       <workItem from="1638386086677" duration="2752000" />
-      <workItem from="1638619918937" duration="1950000" />
+      <workItem from="1638619918937" duration="2100000" />
+      <workItem from="1638622769009" duration="1523000" />
+      <workItem from="1638624380397" duration="5000" />
+      <workItem from="1638624794179" duration="2854000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -248,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637932652268</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Start implementing GUI with JavaFX.">
+      <created>1638622011858</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1638622011858</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +292,7 @@
     <MESSAGE value="Cleanup and re-make documentation." />
     <MESSAGE value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
     <MESSAGE value="Update comments and re-make documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update comments and re-make documentation." />
+    <MESSAGE value="Start implementing GUI with JavaFX." />
+    <option name="LAST_COMMIT_MESSAGE" value="Start implementing GUI with JavaFX." />
   </component>
 </project>

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Update comments and re-make documentation.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pl.polsl.fxml/textcompression.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompressionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecompressionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HistoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -45,17 +47,34 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/JavaStreams" />
+    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/javafx-sdk-17.0.1/lib" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.43678162" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.polsl.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.App" />
+      <module name="DekompresjaTekstu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.polsl.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.polsl.controllers.Main" />
       <module name="DekompresjaTekstu" />
@@ -81,18 +100,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DekompresjaTekstu" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="HistoryTest" />
-        <pattern testClass="DecompressionTest" />
-        <pattern testClass="CompressionTest" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DekompresjaTekstu" />
       <option name="PACKAGE_NAME" value="" />
@@ -112,13 +119,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CompressionTest and 2 more" />
+      <item itemvalue="JUnit.HistoryTest" />
+      <item itemvalue="JUnit.HistoryTest.historyIteratorReturnsCorrectly" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CompressionTest and 2 more" />
         <item itemvalue="JUnit.HistoryTest.historyIteratorReturnsCorrectly" />
         <item itemvalue="JUnit.HistoryTest" />
-        <item itemvalue="JUnit.HistoryTest and 2 more" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +152,10 @@
       <workItem from="1636908914441" duration="6262000" />
       <workItem from="1637361444761" duration="2907000" />
       <workItem from="1637412261520" duration="8687000" />
-      <workItem from="1637930608983" duration="1927000" />
+      <workItem from="1637930608983" duration="2056000" />
+      <workItem from="1638187015334" duration="48000" />
+      <workItem from="1638386086677" duration="2752000" />
+      <workItem from="1638619918937" duration="1950000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -217,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637932510013</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update comments and re-make documentation.">
+      <created>1637932623785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637932623785</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update comments and re-make documentation.">
+      <created>1637932652268</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637932652268</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +278,7 @@
     <MESSAGE value="Add a new test and comments. Rework History tests slightly." />
     <MESSAGE value="Cleanup and re-make documentation." />
     <MESSAGE value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
+    <MESSAGE value="Update comments and re-make documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update comments and re-make documentation." />
   </component>
 </project>

@@ -136,11 +136,15 @@ public class TextCompressionController implements Initializable {
     private void updateHistory() {
         table.getColumns().clear();
 
+        int columnWidth = 300;
+
         TableColumn<Map.Entry<String, String>, String> inputs = new TableColumn<>("Input");
-        inputs.setPrefWidth(310);
+        inputs.setPrefWidth(columnWidth);
+        inputs.setMaxWidth(columnWidth);
 
         TableColumn<Map.Entry<String, String>, String> outputs = new TableColumn<>("Output");
-        outputs.setPrefWidth(310);
+        outputs.setPrefWidth(columnWidth);
+        outputs.setMaxWidth(columnWidth);
 
         table.getColumns().addAll(inputs, outputs);
 

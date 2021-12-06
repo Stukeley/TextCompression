@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"pl.polsl.controllers"},{"l":"pl.polsl.models"},{"l":"pl.polsl.views"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"DekompresjaTekstu","l":"pl.polsl.controllers"},{"m":"DekompresjaTekstu","l":"pl.polsl.models"}];updateSearchResults();

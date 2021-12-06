@@ -2,7 +2,6 @@
 
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
@@ -57,7 +56,7 @@
                 <Font size="16.0" />
             </font>
         </Label>
-        <TableView fx:id="table" prefWidth="620.0" maxWidth="620.0" visible="false">
+        <TableView fx:id="table" prefWidth="620.0" maxWidth="620.0" maxHeight="120" visible="false" >
             <FlowPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </FlowPane.margin>

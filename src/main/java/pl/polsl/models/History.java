@@ -2,7 +2,6 @@ package pl.polsl.models;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.ObservableMap;
 
 import java.util.*;
 import java.util.stream.Stream;

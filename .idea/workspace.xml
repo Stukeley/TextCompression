@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add comments and start implementing History displayed in a TableView.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add more comments and implement populating History table. Move exception messages to a separate Alert.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/Reader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/views/Display.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pl/polsl/controllers/textcompression.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pl/polsl/controllers/textcompression.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

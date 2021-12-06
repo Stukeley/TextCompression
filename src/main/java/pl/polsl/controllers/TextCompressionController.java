@@ -1,7 +1,9 @@
 package pl.polsl.controllers;
 
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +15,7 @@ import pl.polsl.models.History;
 import pl.polsl.models.TextCompressionException;
 
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 /**
@@ -48,10 +51,14 @@ public class TextCompressionController implements Initializable {
     @FXML
     private TableView table;
 
+    /**
+     * History object responsible for keeping track of user inputs and outputs.
+     */
     private History history;
 
     /**
      * Function called automatically upon initializing the controller, after fully processing its root element.
+     * Initializes History.
      * @param url Location used to resolve relative paths to the root object.
      * @param resourceBundle Resources used to localize the root object.
      */
@@ -80,12 +87,24 @@ public class TextCompressionController implements Initializable {
             else {
                 output = algorithm.compress(userInput);
             }
+
+            resultLabel.setText(output);
+
+            history.add(userInput, output);
+
+            // Update history automatically, if visible.
+            if (table.isVisible()) {
+                updateHistory();
+            }
         }
         catch (TextCompressionException ex) {
-            output = "There was an exception during the algorithm: " + ex.getMessage();
-        }
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("There was an exception during the algorithm.");
+            alert.setContentText(ex.getMessage());
 
-        resultLabel.setText(output);
+            alert.showAndWait();
+        }
     }
 
     /**
@@ -96,20 +115,40 @@ public class TextCompressionController implements Initializable {
     @FXML
     private void showHistory(ActionEvent event) {
 
+        // If history is visible, hide it.
+        // Otherwise, update it and show it.
+        if (table.isVisible()) {
+            table.setVisible(false);
+            showHistoryButton.setText("Show History");
+        }
+        else {
+            updateHistory();
+            table.setVisible(true);
+            showHistoryButton.setText("Hide History");
+        }
+    }
+
+    /**
+     * Method re-creating TableView and populating it with History data.
+     * The method first clears the table, then repopulates its inputs and outputs.
+     * It is called upon pressing the "Show History" button, or running the algorithm.
+     */
+    private void updateHistory() {
         table.getColumns().clear();
 
-        TableColumn inputs = new TableColumn("Input");
+        TableColumn<Map.Entry<String, String>, String> inputs = new TableColumn<>("Input");
         inputs.setPrefWidth(310);
 
-        TableColumn outputs = new TableColumn("Output");
+        TableColumn<Map.Entry<String, String>, String> outputs = new TableColumn<>("Output");
         outputs.setPrefWidth(310);
 
         table.getColumns().addAll(inputs, outputs);
 
-        ObservableMap<String, String> map = history.asObservableMap();
+        ObservableList<Map.Entry<String, String>> map = history.asObservableMap();
 
-//        inputs.setCellValueFactory();
+        inputs.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue().getKey()));
+        outputs.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue().getValue()));
 
-        table.setVisible(true);
+        table.setItems(map);
     }
 }

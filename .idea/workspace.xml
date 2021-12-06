@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add updated documentation.">
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Add comments and start implementing History displayed in a TableView.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/TextCompressionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pl/polsl/controllers/textcompression.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pl/polsl/controllers/textcompression.fxml" afterDir="false" />
@@ -162,7 +160,8 @@
       <workItem from="1638622769009" duration="1523000" />
       <workItem from="1638624380397" duration="5000" />
       <workItem from="1638624794179" duration="2854000" />
-      <workItem from="1638774677242" duration="3207000" />
+      <workItem from="1638774677242" duration="3676000" />
+      <workItem from="1638788755603" duration="1010000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -262,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638622011858</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add comments and start implementing History displayed in a TableView.">
+      <created>1638779380115</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638779380115</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +300,7 @@
     <MESSAGE value="Add a null-input test to History. Add streams to History filtering it for compression or decompression algorithm entries only. Add messages to assertions when they fail. Remove the HistoryException class and merge it with TextCompressionException. Cleanup the display of History in console." />
     <MESSAGE value="Update comments and re-make documentation." />
     <MESSAGE value="Start implementing GUI with JavaFX." />
-    <option name="LAST_COMMIT_MESSAGE" value="Start implementing GUI with JavaFX." />
+    <MESSAGE value="Add comments and start implementing History displayed in a TableView." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments and start implementing History displayed in a TableView." />
   </component>
 </project>

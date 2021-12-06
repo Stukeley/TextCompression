@@ -22,7 +22,8 @@ public class App extends Application {
 
     /**
      * Application entry point. This method creates and displays the User Interface.
-     * @param args Command line parameters. However, no parameters are expected.
+     * If parameters are input, they are processed immediately.
+     * @param args Command line parameters.
      */
     public static void main(String[] args) {
         launch();

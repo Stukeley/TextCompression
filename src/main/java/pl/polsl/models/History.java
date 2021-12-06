@@ -1,5 +1,8 @@
 package pl.polsl.models;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -118,6 +121,19 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
         Stream<Map.Entry<String, String>> stream = history.stream().filter(entry -> stringHelper.containsNumbers(entry.getKey()));
 
         return stream;
+    }
+
+    /**
+     * Returns the History in the form of an ObservableMap, which can be used for displaying it on the User Interface
+     * or for data binding.
+     * @return ObservableMap representing the History, with its original Inputs and Outputs.
+     */
+    public ObservableMap<String, String> asObservableMap() {
+        ObservableMap<String, String> map = FXCollections.observableHashMap();
+
+        history.stream().forEach(entry -> map.put(entry.getKey(), entry.getValue()));
+
+        return map;
     }
 
     /**

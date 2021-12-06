@@ -2,4 +2,6 @@
 Projekt JwIiUM, semestr 5.
 
 TODO po ćw. 2:
-- History dać pakietowe i do modelu Algorithm (zamiast wywoływać w kontrolerze)
+- przy excepcji zrobić osobny MessageBox zamiast wyświetlać na scenie
+- zrename'ować folder na jakiś UserInterface albo coś podobnego (w Resources)
+- spopulować tabelę

@@ -12,20 +12,18 @@ import javax.servlet.http.*;
 
 @WebServlet("/Form")
 public class MainServlet extends HttpServlet {
-    /**
-     * Collection of statistics
-     */
+
+    private final Algorithm algorithm;
     private final History history;
 
-    /**
-     * Constructor initiating statistics collection
-     */
     public MainServlet() {
+
+        algorithm = new Algorithm();
         history = new History();
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
+     * Handles the HTTP <code>GET</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -38,16 +36,14 @@ public class MainServlet extends HttpServlet {
         response.setContentType("text/html; charset=ISO-8859-2");
         PrintWriter out = response.getWriter();
 
-        // Get parameter values - firstName i lastName
-
+        // Get parameter value - input
         String input = request.getParameter("input");
 
-        // FirstName or lastName was not given - send error message
+        // input was not given
         if (input.length() == 0) {
             response.sendError(response.SC_BAD_REQUEST, "Input parameter cannot be empty!");
         } else {
 
-            Algorithm algorithm = new Algorithm();
             String output = "";
 
             try {
@@ -73,7 +69,7 @@ public class MainServlet extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP <code>GET</code> method.
+     * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -83,15 +79,6 @@ public class MainServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        response.setContentType("text/plain; charset=ISO-8859-2");
-        PrintWriter out = response.getWriter();
-
-        out.println("Passed parameters:");
-
-        Enumeration enumeration = request.getParameterNames();
-        while (enumeration.hasMoreElements()) {
-            String name = (String) enumeration.nextElement();
-            out.println(name + " = " + request.getParameter(name));
-        }
+        // todo
     }
 }

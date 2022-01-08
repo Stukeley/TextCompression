@@ -10,17 +10,16 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+/**
+ * Servlet responsible for handling the main form, representing the algorithm invocation.
+ */
 @WebServlet("/Form")
 public class MainServlet extends HttpServlet {
 
-    private final Algorithm algorithm;
-    private final History history;
-
-    public MainServlet() {
-
-        algorithm = new Algorithm();
-        history = new History();
-    }
+    /**
+     * Single Algorithm object used in the entire Application.
+     */
+    private final static Algorithm algorithm = new Algorithm();
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -57,7 +56,7 @@ public class MainServlet extends HttpServlet {
                     output = algorithm.compress(input);
                 }
 
-                history.add(input, output);
+                HistoryServlet.history.add(input, output);
             }
             catch (TextCompressionException ex) {
                 response.sendError(response.SC_BAD_REQUEST, ex.getMessage());
@@ -79,6 +78,6 @@ public class MainServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        // todo
+        doGet(request, response);
     }
 }

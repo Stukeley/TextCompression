@@ -7,7 +7,7 @@ import java.util.stream.Stream;
  * Class responsible managing user inputs and outputs in a collection of pair values.
  * Implements the Iterable and Iterator interfaces to allow using a foreach loop directly on objects of this class.
  * @author Rafał Klinowski
- * @version 1.2
+ * @version 1.3
  */
 public class History implements Iterable<Map.Entry<String, String>>, Iterator<Map.Entry<String, String>> {
 
@@ -94,6 +94,67 @@ public class History implements Iterable<Map.Entry<String, String>>, Iterator<Ma
      */
     public int getHistorySize() {
         return history.size();
+    }
+
+    /**
+     * Method to serialize History to a String, which is then saved as a Cookie, to be later deserialized.
+     * @return History in the format: "{input},{output};{input},{output};".
+     */
+    public String serializeToString() {
+
+        StringBuilder serializedBuilder = new StringBuilder();
+
+        for (Map.Entry<String, String> entry : history) {
+            serializedBuilder.append(entry.getKey()).append(',').append(entry.getValue()).append(';');
+        }
+
+        return serializedBuilder.toString();
+    }
+
+    /**
+     * Method to serialize History from a String of the format specified in serializeToString.
+     * @param serialized Serialized History String.
+     */
+    public void deserializeFromString(String serialized) {
+
+        history.clear();
+
+        while (true) {
+            int indexOfSemicolon = serialized.indexOf(';');
+
+            if (indexOfSemicolon == -1) {
+                break;
+            }
+
+            String substr = serialized.substring(0, indexOfSemicolon);
+
+            int indexOfComma = substr.indexOf(',');
+
+            String input = substr.substring(0, indexOfComma);
+            String output = substr.substring(indexOfComma + 1);
+
+            Map.Entry<String, String> entry = new AbstractMap.SimpleEntry(input, output);
+
+            history.add(entry);
+
+            serialized = serialized.substring(indexOfSemicolon + 1);
+        }
+
+    }
+
+    /**
+     * Overridden method to easily convert History to a displayable String.
+     * @return History as a String to be displayed somewhere.
+     */
+    @Override
+    public String toString() {
+        StringBuilder outputBuilder = new StringBuilder();
+
+        for (Map.Entry<String, String> entry : history) {
+            outputBuilder.append("Input: ").append(entry.getKey()).append(", output: ").append(entry.getValue()).append("<br/>");
+        }
+
+        return outputBuilder.toString();
     }
 
     /**

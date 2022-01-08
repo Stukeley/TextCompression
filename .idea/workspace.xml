@@ -7,14 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Fix issues with JavaFX and add basic functionality.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/listeners/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Small tweaks and improvements.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/HistoryServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/filters/SecondsFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/listeners/MainListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/listeners/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/javax.annotation.jar" />
+    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/JavaServlets" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.43678162" />
@@ -174,6 +175,7 @@
       <workItem from="1639382565037" duration="211000" />
       <workItem from="1639982913223" duration="613000" />
       <workItem from="1641139207158" duration="2344000" />
+      <workItem from="1641643838074" duration="5841000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -287,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638811839664</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Small tweaks and improvements.">
+      <created>1641196423092</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1641196423092</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +330,7 @@
     <MESSAGE value="Start implementing GUI with JavaFX." />
     <MESSAGE value="Add comments and start implementing History displayed in a TableView." />
     <MESSAGE value="Delete Console-based view and controllers. Add full History support in the GUI. Remake documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Console-based view and controllers. Add full History support in the GUI. Remake documentation." />
+    <MESSAGE value="Small tweaks and improvements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small tweaks and improvements." />
   </component>
 </project>

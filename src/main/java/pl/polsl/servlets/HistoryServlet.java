@@ -19,7 +19,11 @@ public class HistoryServlet extends HttpServlet {
     /**
      * Single History object used in the entire Application.
      */
-    final static History history = new History();
+    final static History history;
+
+    static {
+        history = new History();
+    }
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -55,6 +59,10 @@ public class HistoryServlet extends HttpServlet {
         }
 
         String output = history.toString();
+        
+       if (output.length() == 0) {
+           output = "History is empty!";
+       }
 
         out.println("<html>\n<body>\n<h1>" + output + "</h1>\n");
         out.println("</body>\n</html>");

@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"DekompresjaTekstu"}];updateSearchResults();
+moduleSearchIndex = [];updateSearchResults();

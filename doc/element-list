@@ -1,3 +1,2 @@
-module:DekompresjaTekstu
-pl.polsl.controllers
 pl.polsl.models
+pl.polsl.servlets

@@ -7,15 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Small tweaks and improvements.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/HistoryServlet.java" afterDir="false" />
+    <list default="true" id="e6558e5d-8a28-4daa-9d8e-a63147c54300" name="Changes" comment="Implement base functionality of the full r4 application (no documentation yet).">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/DatabaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/controllers/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/entities/BonusInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/entities/HistoryEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/entities/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/listeners/MainListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/listeners/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/models/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/polsl/servlets/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +55,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/JavaServlets" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="E:/Zdalna Edukacja/Java/JPA" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.43678162" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
@@ -175,7 +175,8 @@
       <workItem from="1639382565037" duration="211000" />
       <workItem from="1639982913223" duration="613000" />
       <workItem from="1641139207158" duration="2344000" />
-      <workItem from="1641643838074" duration="5841000" />
+      <workItem from="1641643838074" duration="6678000" />
+      <workItem from="1642942410464" duration="3627000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes and documentation.">
       <created>1635072316118</created>
@@ -296,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641196423092</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implement base functionality of the full r4 application (no documentation yet).">
+      <created>1641650333340</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1641650333340</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +339,7 @@
     <MESSAGE value="Add comments and start implementing History displayed in a TableView." />
     <MESSAGE value="Delete Console-based view and controllers. Add full History support in the GUI. Remake documentation." />
     <MESSAGE value="Small tweaks and improvements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Small tweaks and improvements." />
+    <MESSAGE value="Implement base functionality of the full r4 application (no documentation yet)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement base functionality of the full r4 application (no documentation yet)." />
   </component>
 </project>

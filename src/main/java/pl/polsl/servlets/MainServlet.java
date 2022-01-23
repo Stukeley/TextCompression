@@ -1,10 +1,14 @@
 package pl.polsl.servlets;
 
+import pl.polsl.controllers.DatabaseController;
+import pl.polsl.entities.BonusInfo;
+import pl.polsl.entities.HistoryEntry;
 import pl.polsl.models.Algorithm;
 import pl.polsl.models.History;
 import pl.polsl.models.TextCompressionException;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +23,12 @@ public class MainServlet extends HttpServlet {
     /**
      * Single Algorithm object used in the entire Application.
      */
-    private final static Algorithm algorithm = new Algorithm();
+    private final Algorithm algorithm = new Algorithm();
+
+    /**
+     * Single DatabaseController object used in the entire Application.
+     */
+    private final DatabaseController databaseController = new DatabaseController();
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -57,6 +66,12 @@ public class MainServlet extends HttpServlet {
                 }
 
                 HistoryServlet.history.add(input, output);
+
+                // NEW - add to database.
+                BonusInfo bonusInfo = new BonusInfo(LocalDateTime.now(), isInputCompressed);
+                HistoryEntry entry = new HistoryEntry(output, bonusInfo);
+
+                databaseController.persistObject(entry);
             }
             catch (TextCompressionException ex) {
                 response.sendError(response.SC_BAD_REQUEST, ex.getMessage());

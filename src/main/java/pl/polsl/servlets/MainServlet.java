@@ -65,7 +65,8 @@ public class MainServlet extends HttpServlet {
                     output = algorithm.compress(input);
                 }
 
-                HistoryServlet.history.add(input, output);
+                // Obsolete - we use the database now.
+                // HistoryServlet.history.add(input, output);
 
                 // NEW - add to database.
                 BonusInfo bonusInfo = new BonusInfo(LocalDateTime.now(), isInputCompressed);

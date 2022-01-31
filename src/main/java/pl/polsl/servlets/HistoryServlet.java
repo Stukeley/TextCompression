@@ -1,5 +1,7 @@
 package pl.polsl.servlets;
 
+import pl.polsl.controllers.DatabaseController;
+import pl.polsl.entities.HistoryEntry;
 import pl.polsl.models.Algorithm;
 import pl.polsl.models.History;
 import pl.polsl.models.TextCompressionException;
@@ -19,11 +21,12 @@ public class HistoryServlet extends HttpServlet {
     /**
      * Single History object used in the entire Application.
      */
-    final static History history;
+    private final History history = new History();
 
-    static {
-        history = new History();
-    }
+    /**
+     * Single DatabaseController object used in the entire Application.
+     */
+    private final DatabaseController databaseController = new DatabaseController();
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -39,8 +42,8 @@ public class HistoryServlet extends HttpServlet {
         response.setContentType("text/html; charset=ISO-8859-2");
         PrintWriter out = response.getWriter();
 
-        // Read cookies.
-        Cookie[] cookies = request.getCookies();
+        // Read cookies - obsolete, we use the database now.
+        /*Cookie[] cookies = request.getCookies();
         Cookie historySerializedCookie = null;
         String historySerialized = null;
 
@@ -62,19 +65,32 @@ public class HistoryServlet extends HttpServlet {
         
        if (output.length() == 0) {
            output = "History is empty!";
-       }
+       }*/
 
-        out.println("<html>\n<body>\n<h1>" + output + "</h1>\n");
-        out.println("</body>\n</html>");
+        try {
+            List<HistoryEntry> entries = databaseController.findObjects();
 
-        // Save cookies.
-        if (historySerializedCookie != null) {
+            StringBuilder output = new StringBuilder();
+
+            for (HistoryEntry entry : entries) {
+                output.append(entry.toString());
+            }
+
+            out.println("<html>\n<body>\n<h1>" + output.toString() + "</h1>\n");
+            out.println("</body>\n</html>");
+        }
+        catch (TextCompressionException ex) {
+            response.sendError(response.SC_BAD_REQUEST, ex.getMessage());
+        }
+
+        // Save cookies - obsolete.
+        /*if (historySerializedCookie != null) {
             historySerializedCookie.setValue(history.serializeToString());
         }
         else {
             Cookie cookie = new Cookie("historySerialized", history.serializeToString());
             response.addCookie(cookie);
-        }
+        }*/
     }
 
     /**

@@ -41,8 +41,15 @@ public class MainServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+
         response.setContentType("text/html; charset=ISO-8859-2");
         PrintWriter out = response.getWriter();
+
+        if (request == null) {
+            out.println("<html>\n<body>\n<h1>" + "Incorrect access - request was null." + "</h1>\n");
+            out.println("</body>\n</html>");
+            return;
+        }
 
         // Get parameter value - input
         String input = request.getParameter("input");
